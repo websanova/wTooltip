@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Websanova Tooltip</title>
+	
+	<script type="text/javascript" src="./inc/jquery.1.7.1.min.js"></script>
+	
+	<link rel="Stylesheet" type="text/css" href="./wTooltip.css" />
+	<script type="text/javascript" src="./wTooltip.js"></script>
+	
+	<style>
+		.hoverBox{
+			display: inline-block;
+			margin: 10px;
+			padding: 10px 30px;
+			border: solid #CACACA 1px;
+			cursor: pointer;
+		}
+	</style>
+	
+</head>
+<body>
+	
+	<div id="wTooltip1" class="hoverBox">hover me</div>
+	<div id="wTooltip2" class="hoverBox" title="Title from title attribute">hover me</div>
+	<div id="wTooltip3" class="hoverBox">hover me</div>
+	<div id="wTooltip4" class="hoverBox active" onclick="tooltip_toggle();">click me</div>
+
+	<div id="wTooltip5" class="hoverBox" title="This is tooltip 5">hover me</div>
+	<div id="wTooltip6" class="hoverBox" title="This is tooltip 6">hover me</div>
+	
+	<script type="text/javascript">
+		$("#wTooltip1").wTooltip();
+		
+		$("#wTooltip2").wTooltip({
+			timeToStop: 2000,
+			color: "blue"
+		});
+		
+		$("#wTooltip3").wTooltip({
+			position: "mouse",
+			timeToStop: 2000,
+			color: "red"
+		});
+		
+		$("#wTooltip4").wTooltip({
+			position: "mouse",
+			title: "This box is on",
+			color: "green"
+		});
+		
+		$("#wTooltip5, #wTooltip6").wTooltip({
+			position: "mouse"
+		});
+		
+		function tooltip_toggle()
+		{
+			if($("#wTooltip4").hasClass("active"))
+			{
+				$("#wTooltip4").removeClass("active");
+				$("#wTooltip4").wTooltip("title", "This box is off");
+			}
+			else
+			{
+				$("#wTooltip4").addClass("active");
+				$("#wTooltip4").wTooltip("title", "This box is on");
+			}
+		}
+	</script>
+	
+</body>
+</html>
