@@ -25,9 +25,12 @@
 	<div id="wTooltip2" class="hoverBox" title="Title from title attribute">hover me</div>
 	<div id="wTooltip3" class="hoverBox">hover me</div>
 	<div id="wTooltip4" class="hoverBox active" onclick="tooltip_toggle();">click me</div>
-
 	<div id="wTooltip5" class="hoverBox" title="This is tooltip 5">hover me</div>
 	<div id="wTooltip6" class="hoverBox" title="This is tooltip 6">hover me</div>
+	<div id="wTooltip7" class="hoverBox" title="This is <span style='color:red;'>html</span>">hover html</div>
+	<div id="wTooltip8" class="hoverBox" title="This is <span style='color:red;'>html</span>">hover no html</div>
+	<div id="wTooltip9" class="hoverBox active" title="<span style='color:red;'>no html</span>" onclick="html_toggle();">click me</div>
+	<div id="wTooltip10" class="hoverBox active" title="<span style='color:red;'>no html</span>" onclick="html_toggle2();">click me</div>
 	
 	<script type="text/javascript">
 		$("#wTooltip1").wTooltip();
@@ -53,6 +56,14 @@
 			position: "mouse"
 		});
 		
+		$("#wTooltip7").wTooltip();
+		
+		$("#wTooltip8").wTooltip({html:false});
+		
+		$("#wTooltip9").wTooltip({html:false});
+		
+		$("#wTooltip10").wTooltip({html:false});
+		
 		function tooltip_toggle()
 		{
 			if($("#wTooltip4").hasClass("active"))
@@ -65,6 +76,17 @@
 				$("#wTooltip4").addClass("active");
 				$("#wTooltip4").wTooltip("title", "This box is on");
 			}
+		}
+		
+		function html_toggle()
+		{
+			$("#wTooltip9").wTooltip("title", "<span style='color:red;'>still no html</span>");
+		}
+		
+		function html_toggle2()
+		{
+			$("#wTooltip10").wTooltip('html', true);
+			$("#wTooltip10").wTooltip('title', '<span style="color:red;">yes html</span>');
 		}
 	</script>
 	

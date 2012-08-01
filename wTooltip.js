@@ -28,7 +28,7 @@
 				if($.fn.wTooltip.defaultSettings[option] !== undefined)
 				{
 					if(settings !== undefined){
-						if(option == 'title') data.content.html(settings);
+						if(option == 'title') data.settings.html ? data.content.html(settings) : data.content.text(settings);
 						data.settings[option] = settings;
 						return true;
 					}
@@ -104,7 +104,8 @@
 		width		: null,			// define a set width for the tooltip
 		height		: null,			// define a set height for the tooltip
 		offsetX		: 8,			// x offset of mouse position
-		offsetY		: 9				// y offset of mouse position
+		offsetY		: 9,			// y offset of mouse position
+		html		: true			// title is inserted as HTML rather than text
 	};
 
 	/**
@@ -148,7 +149,9 @@
 		{
 			if(this.tooltip) return this.tooltip;
 						
-			this.content = $('<div class="_wTooltip_content">' + this.settings.title + '</div>').css({width: this.settings.width || '', height: this.settings.height || '', whiteSpace: this.settings.width == null && this.settings.height == null ? 'nowrap' : 'normal'});//.css({width: this.settings.width, height: this.settings.height});			
+			this.content = $('<div class="_wTooltip_content"></div>').css({width: this.settings.width || '', height: this.settings.height || '', whiteSpace: this.settings.width == null && this.settings.height == null ? 'nowrap' : 'normal'});
+			this.settings.html ? this.content.html(this.settings.title) : this.content.text(this.settings.title);
+					
 			var bg = $('<div class="_wTooltip_bg"></div>').css({opacity: this.settings.opacity});
 			
 			this.tooltip =
