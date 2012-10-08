@@ -8,7 +8,7 @@
  * @license         This wTooltip jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wTooltip
- * @version         Version 1.7.2
+ * @version         Version 1.7.3
  *
  ******************************************/
 (function($)
@@ -98,7 +98,7 @@
 	{
 		position	: 'default',	// should the tooltip follow the mouse
 		timeToStop	: null,			// only works with position default - the time mouse has to stop before triggering display of tooltip
-		color		: 'cream', 		// allow custom with #FFAACC
+		theme		: 'cream', 		// allow custom with #FFAACC
 		opacity		: 0.8,			// opacity level
 		title		: null,			// manually set title
 		fadeIn		: 0,			// time before tooltip appears in milliseconds
@@ -169,7 +169,7 @@
 					.append( this.content )
 				)
 			)
-			.addClass('_wTooltip_' + this.settings.color)
+			.addClass('_wTooltip_' + this.settings.theme)
 
 			return this.tooltip;
 		},
