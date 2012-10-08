@@ -8,7 +8,7 @@
  * @license         This wTooltip jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wTooltip
- * @version         Version 1.7.1
+ * @version         Version 1.7.2
  *
  ******************************************/
 (function($)
@@ -133,9 +133,10 @@
 	/**
 	 * Tooltip class definition
 	 */
-	function Tooltip(settings, eventScheduler)
+	function Tooltip(settings, eventScheduler, elem)
 	{
 		this.tooltip = null;
+		this.$elem = elem;
 		this.content = null;
 		
 		this.hover = false;
