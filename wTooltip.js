@@ -7,8 +7,8 @@
  * @copyright       Copyright (c) 2012 Websanova.
  * @license         This wTooltip jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
- * @docs            http://www.websanova.com/plugins/websanova/tooltip
- * @version         Version x.x
+ * @github			http://github.com/websanova/wTooltip
+ * @version         Version 1.7.1
  *
  ******************************************/
 (function($)
@@ -19,24 +19,28 @@
 		{
 			settings = option;
 		}
-		else if(typeof option == 'string')
+		else if(typeof option === 'string')
 		{
-			var data = this.data('_wTooltip');
+			var values = [];
 
-			if(data)
+			var elements = this.each(function()
 			{
-				if($.fn.wTooltip.defaultSettings[option] !== undefined)
+				var data = $(this).data('_wTooltip');
+
+				if(data)
 				{
-					if(settings !== undefined){
-						if(option == 'title') data.settings.html ? data.content.html(settings) : data.content.text(settings);
-						data.settings[option] = settings;
-						return true;
+					if(option === 'title') { data.settings.html ? data.content.html(settings) : data.content.text(settings); }
+					else if($.fn.wTooltip.defaultSettings[option] !== undefined)
+					{
+						if(settings !== undefined) { data.settings[option] = settings; }
+						else { values.push(data.settings[option]); }
 					}
-					else return data.settings[option];
 				}
-				else return false;
-			}
-			else return false;
+			});
+
+			if(values.length === 1) { return values[0]; }
+			if(values.length > 0) { return values; }
+			else { return elements; }
 		}
 		
 		settings = $.extend({}, $.fn.wTooltip.defaultSettings, settings || {});
