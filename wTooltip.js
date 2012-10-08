@@ -96,7 +96,7 @@
 
 	$.fn.wTooltip.defaultSettings =
 	{
-		position	: 'default',	// should the tooltip follow the mouse
+		position	: 'default',	// should the tooltip follow the mouse [default,mouse]
 		timeToStop	: null,			// only works with position default - the time mouse has to stop before triggering display of tooltip
 		theme		: 'cream', 		// allow custom with #FFAACC
 		opacity		: 0.8,			// opacity level
