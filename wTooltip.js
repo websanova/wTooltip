@@ -8,7 +8,7 @@
  * @license         This wTooltip jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wTooltip
- * @version         Version 1.7.4
+ * @version         Version 1.7.5
  *
  ******************************************/
 (function($)
@@ -42,15 +42,13 @@
 			if(values.length > 0) { return values; }
 			else { return elements; }
 		}
-		
-		settings = $.extend({}, $.fn.wTooltip.defaultSettings, settings || {});
 
 		return this.each(function()
 		{
 			var elem = $(this);
 			
-			var $settings = jQuery.extend(true, {}, settings);
-			$settings.title = settings.title || elem.attr('title') || 'No title set';
+			var $settings = $.extend({}, $.fn.wTooltip.defaultSettings, settings || {});
+			$settings.title = $settings.title || elem.attr('title') || 'No title set';
 			
 			var eventScheduler = new EventScheduler();
 			var tooltip = new Tooltip($settings, eventScheduler, elem);
@@ -61,18 +59,18 @@
 			//remove title attribute so that we don't have the browser title showing up
 			elem.removeAttr('title')
 			
-			if(settings.position == 'default')
+			if($settings.position == 'default')
 			{
 				elem.mousestop(function(e){
 					tooltip.move(e);//set proper position first
 					tooltip.hoverOn();//display the tooltip
 				},{
-					timeToStop: settings.timeToStop,
+					timeToStop: $settings.timeToStop,
 					onMouseout: function(){ tooltip.hoverOff(); },
 					onStopMove: function(){ tooltip.hoverOff(); }//this will hide tooltip once it's appeared and we move again
 				});
 			}
-			else if(settings.position == 'mouse')
+			else if($settings.position == 'mouse')
 			{
 				elem
 				.mouseover(function(){ tooltip.hoverOn(); })
