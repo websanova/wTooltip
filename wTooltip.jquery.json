@@ -1,0 +1,33 @@
+{
+  "name": "wTooltip",
+  "title": "wTooltip jQuery Plugin",
+  "description": "A jQuery tooltip plugin by Websanova",
+  "keywords": [
+    "websanova",
+    "tooltip"
+  ],
+  "version": "1.7.5",
+  "author": {
+    "name": "Websanova"
+  },
+  "maintainers": [
+    {
+      "name": "Websanova",
+      "email": "rob@websanova.com",
+      "url": "http://websanova.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/websanova/wTooltip#license"
+    }
+  ],
+  "bugs": "https://github.com/websanova/wTooltip/issues",
+  "homepage": "http://websanova.com/plugins/tooltip",
+  "docs": "https://github.com/websanova/wTooltip#wtooltipjs",
+  "download": "https://github.com/websanova/wTooltip/tags",
+  "dependencies": {
+    "jquery": ">=1.5"
+  }
+}
