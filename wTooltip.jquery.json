@@ -5,9 +5,10 @@
   "keywords": [
     "websanova",
     "wtooltip",
-    "tooltip"
+    "tooltip",
+    "ui"
   ],
-  "version": "1.7.6",
+  "version": "v1.7.6",
   "author": {
     "name": "Websanova"
   },
