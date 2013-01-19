@@ -8,7 +8,7 @@
  * @license         This wTooltip jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wTooltip
- * @version         Version 1.7.6
+ * @version         Version 1.7.7
  *
  ******************************************/
 (function($)

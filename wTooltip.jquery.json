@@ -8,9 +8,11 @@
     "tooltip",
     "ui"
   ],
-  "version": "v1.7.6",
+  "version": "v1.7.7",
   "author": {
-    "name": "Websanova"
+    "name": "Websanova",
+    "email": "rob@websanova.com",
+    "url": "http://websanova.com"
   },
   "maintainers": [
     {
