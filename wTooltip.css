@@ -6,14 +6,16 @@
 ._wTooltip_content{position:relative;}
 
 /*** visuals ***/
-._wTooltip_holder{border-width:2px; border-style:solid; border-radius:6px;}/*outer border*/
-._wTooltip_outer{border-width:1px; border-style:solid; border-radius:5px; margin:1px; }/*inner border*/
-._wTooltip_content{padding:3px 10px; font-weight:bold; font-family:verdana; font-size:11px; line-height: 15px;}/*content*/
+._wTooltip_holder{border-width:0px; border-style:solid; border-radius:6px;}/*outer border*/
+._wTooltip_outer{border-width:1px; border-style:solid; border-radius:5px; margin:0px; }/*inner border*/
+._wTooltip_content{padding:4px 9px; font-family:verdana; font-size:10px; line-height: 15px;}/*content*/
 
 /*** colors ***/
 ._wTooltip_red, ._wTooltip_red ._wTooltip_outer{border-color:#CE6F6F;}
 ._wTooltip_red ._wTooltip_bg{background-color:#F79992;}
 ._wTooltip_red ._wTooltip_inner{color:#9C2F2F;}
+._wTooltip_red._wTooltip_holder{border-width:1px;}
+._wTooltip_red ._wTooltip_outer{margin:1px;}
 
 ._wTooltip_green, ._wTooltip_green ._wTooltip_outer{border-color:#A9DB66;}
 ._wTooltip_green ._wTooltip_bg{background-color:#CDE6AC;}
@@ -27,9 +29,11 @@
 ._wTooltip_white ._wTooltip_bg{ background-color:#FFFFFF;}
 ._wTooltip_white ._wTooltip_inner{color:#454545;}
 
-._wTooltip_black, ._wTooltip_black ._wTooltip_outer{border-color:#303030;}
-._wTooltip_black ._wTooltip_bg{background-color:#505050;}
-._wTooltip_black ._wTooltip_inner{color:#F3F3F3;}
+._wTooltip_black, ._wTooltip_black ._wTooltip_outer{border-color:#000;}
+._wTooltip_black ._wTooltip_bg{background-color:#000;}
+._wTooltip_black ._wTooltip_inner{color:#FFF;}
+._wTooltip_black._wTooltip_holder{border-width:1px;}
+._wTooltip_black ._wTooltip_outer{margin:1px;}
 
 ._wTooltip_cream, ._wTooltip_cream ._wTooltip_outer{border-color:#F9E98E;}
 ._wTooltip_cream ._wTooltip_bg{background-color:#FBF7AA;}
@@ -38,6 +42,8 @@
 ._wTooltip_yellow, ._wTooltip_yellow ._wTooltip_outer{border-color:#E9D315;}
 ._wTooltip_yellow ._wTooltip_bg{background-color:#F9F2BA;}
 ._wTooltip_yellow ._wTooltip_inner{color:#5B5316;}
+._wTooltip_yellow._wTooltip_holder{border-radius:0px;}
+._wTooltip_yellow ._wTooltip_outer{border-radius:0px;}
 
 ._wTooltip_orange, ._wTooltip_orange ._wTooltip_outer{border-color:#E56717;}
 ._wTooltip_orange ._wTooltip_bg{background-color:#F87217;}
@@ -46,3 +52,5 @@
 ._wTooltip_plum, ._wTooltip_plum ._wTooltip_outer{border-color:#7E354D;}
 ._wTooltip_plum ._wTooltip_bg{background-color:#B93B8F;}
 ._wTooltip_plum ._wTooltip_inner{color:#F9B7FF;}
+._wTooltip_plum._wTooltip_holder{border-radius:0px; border-width:1px;}
+._wTooltip_plum ._wTooltip_outer{border-radius:0px; margin:1px;}
