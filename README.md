@@ -2,6 +2,8 @@
 
 A jQuery tooltip plugin for clean and simple tooltips.  Also supports `mousestop` event which more closely simulates the way the browser tooltips work by only appearing when a user actually pauses over an element.
 
+* [View the wTooltip demo](http://wtooltip.websanova.com)
+* [Download the lastest version of wTooltip](https://github.com/websanova/wTooltip/tags)
 
 ## Related Plugins
 
@@ -31,16 +33,6 @@ $('#elem').wTooltip({
     html        : true          // title is inserted as HTML rather than text
 });
 ```
-
-* [View the wTooltip demo](http://wtooltip.websanova.com)
-* [Download the lastest version of wTooltip](https://github.com/websanova/wTooltip/tags)
-
-
-## Related Plugins
-
-* [wChar](http://wchar.websanova.com) - On the fly character counter for inputs.
-* [wModal](http://wmodal.websanova.com) - Clean looking and easy to use modals.
-* [wHumanMsg](http://whumanmsg.websanova.com) - Simple user prompting.
 
 
 ## Examples
