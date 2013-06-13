@@ -1,13 +1,19 @@
 # wTooltip.js
 
-A jQuery tooltip plugin. [Check out the live demo](http://www.websanova.com/plugins/tooltips/jquery).
+A jQuery tooltip plugin for clean and simple tooltips.  Also supports `mousestop` event which more closely simulates the way the browser tooltips work by only appearing when a user actually pauses over an element.
+
+
+## Related Plugins
+
+* [wHumanMsg](http://whumanmsg.websanova.com) - Simple user prompting.
+* [wModal](http://wModal.websanova.com) - Clean looking and easy to use modals.
 
 
 ## Settings
 
 Available options with notes, the values here are the defaults.
 
-```javascript
+```js
 $('#elem').wTooltip({
     position    : 'default',    // should the tooltip follow the mouse [default,mouse]
     timeToStop  : null,         // only works with position default - the time mouse has to stop before triggering display of tooltip
@@ -26,26 +32,24 @@ $('#elem').wTooltip({
 });
 ```
 
-Update settings on the fly:
+* [View the wTooltip demo](http://wtooltip.websanova.com)
+* [Download the lastest version of wTooltip](https://github.com/websanova/wTooltip/tags)
 
-```javascript
-$('input').wTooltip('html', true);
-```
 
-Retrieve settings, if more than one it will return an array otherwise just the value.
+## Related Plugins
 
-```javascript
-console.log($('#elem').wTooltip('html'))            // false
-console.log($('.elem').wTooltip('html'))            // [true, true, false]
-```
+* [wChar](http://wchar.websanova.com) - On the fly character counter for inputs.
+* [wModal](http://wmodal.websanova.com) - Clean looking and easy to use modals.
+* [wHumanMsg](http://whumanmsg.websanova.com) - Simple user prompting.
 
 
 ## Examples
 
-Init tooltip with theme and delay before tooltip appears:
+Include plugin files and init:
 
-```html
-<div id="wTooltip">hover me</div>
+```js
+<script type="text/javascript" src="./wTooltip.js"></script>
+<link rel="Stylesheet" type="text/css" href="./wTooltip.css" />
 
 <script type="text/javascript">
     $("#wTooltip").wTooltip({
@@ -55,22 +59,18 @@ Init tooltip with theme and delay before tooltip appears:
 </script>
 ```
 
-Toggle HTML:
+### html
 
-```html
-<div id="wTooltip" title="<span style='color:red;'>no html</span>" onclick="html_toggle();">click me</div>
-    
-<script type="text/javascript">
-    $("#wTooltip").wTooltip({html:false});
+You can toggle the tooltips dispaly html as plain text.
 
-    $("#wTooltip").wTooltip('html', true);
-    $("#wTooltip").wTooltip('title', '<span style="color:red;">yes html</span>');
-</script>
+```js
+$("#wTooltip").wTooltip({html:false});
 ```
 
 
 ## Resources
 
+* [More jQuery plugins by Websanova](http://websanova.com/plugins)
 * [jQuery Plugin Development Boilerplate](http://www.websanova.com/tutorials/jquery/jquery-plugin-development-boilerplate)
 * [The Ultimate Guide to Writing jQuery Plugins](http://www.websanova.com/tutorials/jquery/the-ultimate-guide-to-writing-jquery-plugins)
 

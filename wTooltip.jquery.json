@@ -1,14 +1,14 @@
 {
   "name": "wTooltip",
   "title": "wTooltip jQuery Plugin",
-  "description": "A jQuery tooltip plugin by Websanova",
+  "description": "A jQuery tooltip plugin for clean and simple tooltips.  Also supports mousestop event which more closely simulates the way the browser tooltips work by only appearing when a user actually pauses over an element.",
   "keywords": [
     "websanova",
     "wtooltip",
     "tooltip",
     "ui"
   ],
-  "version": "1.7.9",
+  "version": "1.7.10",
   "author": {
     "name": "Websanova",
     "email": "rob@websanova.com",
@@ -28,7 +28,7 @@
     }
   ],
   "bugs": "https://github.com/websanova/wTooltip/issues",
-  "homepage": "http://websanova.com/plugins/tooltip",
+  "homepage": "http://wtooltip.websanova.com",
   "docs": "https://github.com/websanova/wTooltip#wtooltipjs",
   "download": "https://github.com/websanova/wTooltip/tags",
   "dependencies": {

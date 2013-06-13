@@ -1,114 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-
-	<title>Websanova Tooltip</title>
-	
-	<script type="text/javascript" src="./inc/jquery.1.8.2.min.js"></script>
-	
-	<link rel="Stylesheet" type="text/css" href="./wTooltip.css" />
-	<script type="text/javascript" src="./wTooltip.js"></script>
-	
-	<style>
-		.hoverBox{
-			display: inline-block;
-			margin: 10px;
-			padding: 10px 30px;
-			border: solid #CACACA 1px;
-			cursor: pointer;
-		}
-	</style>
-	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="jquery, plugin, tooltip, tip" />
+    <meta name="description" content="A jQuery tooltip plugin for clean and simple tooltips.  Also supports mousestop event which more closely simulates the way the browser tooltips work by only appearing when a user actually pauses over an element." />
+    <meta name = "owner" content = "Websanova" />
+    <link rel="icon" type="image/vnd.microsoft.icon"  href="./assets/img/favicon.ico" />
+    <title>Websanova :: wTooltip</title>
+    
+    <script type="text/javascript" src="./assets/jquery.1.9.1.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="./assets/demo.css" />
 </head>
 <body>
-	
-	<div id="wTooltip1" class="hoverBox">hover me</div>
-	<div id="wTooltip2" class="hoverBox" title="Title from title attribute">hover me</div>
-	<div id="wTooltip3" class="hoverBox">hover me</div>
-	<div id="wTooltip4" class="hoverBox active" onclick="tooltip_toggle();">click me</div>
-	<div id="wTooltip5" class="hoverBox" title="This is tooltip 5">hover me</div>
-	<div id="wTooltip6" class="hoverBox" title="This is tooltip 6">hover me</div>
-	<div id="wTooltip7" class="hoverBox" title="This is <span style='color:red;'>html</span>">hover html</div>
-	<div id="wTooltip8" class="hoverBox" title="This is <span style='color:red;'>html</span>">hover no html</div>
-	<div id="wTooltip9" class="hoverBox active" title="<span style='color:red;'>no html</span>" onclick="html_toggle();">click me</div>
-	<div id="wTooltip10" class="hoverBox active" title="<span style='color:red;'>no html</span>" onclick="html_toggle2();">click me</div>
-	<div id="wTooltip11" class="hoverBox" title="Home">hover me</div>
-	<div id="wTooltip12" class="hoverBox">hover me</div>
-	
+    <header>
+        <a id="header-logo" href="http://websanova.com" target="_blank"></a>
 
-	<div class="mooTest" title="moo">moo</div>
-	<div class="mooTest" title="poo">poo</div>
-	<div class="mooTest" title="zoo">zoo</div>
+        <div id="header-links">
+            <a href="http://websanova.com">Home</a>
+            <a href="http://websanova.com/plugins">Plugins</a>
+            <a href="http://websanova.com/extensions">Extensions</a>
+        </div>
+    </header>   
 
-	<script type="text/javascript">
+    <div id="content">
+        <h1 id="plugin-name">wTooltip.js</h1>
 
-		$('.mooTest').wTooltip();
+        <div id="addthis-toolbox" class="addthis_toolbox addthis_default_style">
+            <a id="github-button" href="https://github.com/websanova/wTooltip" target="_blank" title="GitHub"></a>
+            <a class="addthis_button_facebook" addthis:url="http://wtooltip.websanova.com" addthis:title="Websanova wTooltip Demo"></a>
+            <a class="addthis_button_twitter" addthis:url="http://wtooltip.websanova.com" addthis:title="Websanova wTooltip Demo"></a>
+            <a class="addthis_button_google_plusone_share" addthis:url="http://wtooltip.websanova.com" addthis:title="Websanova wTooltip Demo"></a>
+            <a class="addthis_button_reddit" addthis:url="http://wtooltip.websanova.com" addthis:title="Websanova wTooltip Demo"></a>
+            <a class="addthis_button_dzone" addthis:url="http://wtooltip.websanova.com" addthis:title="Websanova wTooltip Demo"></a>
+            <a class="addthis_button_compact" addthis:url="http://wtooltip.websanova.com" addthis:title="Websanova wTooltip Demo"></a>
+        </div>
 
-		console.log($('.mooTest').wTooltip('opacity'));
-		$('.mooTest :first').wTooltip('opacity', 0.2)
-		console.log($('.mooTest').wTooltip('opacity'));
+        <h2>About</h2>
 
-		$("#wTooltip1").wTooltip();
-		
-		$("#wTooltip2").wTooltip({
-			timeToStop: 2000,
-			theme: "blue"
-		});
-		
-		$("#wTooltip3").wTooltip({
-			position: "mouse",
-			timeToStop: 2000,
-			theme: "plum"
-		});
-		
-		$("#wTooltip4").wTooltip({
-			position: "mouse",
-			title: "This box is on",
-			theme: "green"
-		});
-		
-		$("#wTooltip5, #wTooltip6").wTooltip({position: "mouse", theme:'white'});
-		
-		$("#wTooltip7").wTooltip({theme:'orange'});
-		
-		$("#wTooltip8").wTooltip({html:false, theme:'black'});
-		
-		$("#wTooltip9").wTooltip({html:false, theme:'red'});
-		
-		$("#wTooltip10").wTooltip({html:false, theme:'cream'});
+        <div class="content-box">
+            A jQuery tooltip plugin for clean and simple tooltips.  Also supports <code>mousestop</code> event which more closely simulates the way the browser tooltips work by only appearing when a user actually pauses over an element.
+        </div>
 
-		$("#wTooltip11").wTooltip({html:false, theme:'black'});
+        <ul>
+            <li><a href="https://github.com/websanova/wTooltip/tags">Download</a></li>
+            <li><a href="https://github.com/websanova/wTooltip#wtooltipjs">Documentation</a></li>
+        </ul>
 
-		$("#wTooltip12").wTooltip({html:false, theme:'yellow'});
-		
-		
+        <h2>Related Plugins</h2>
+        
+        <ul>
+            <li><a href="http://whumanmsg.websanova.com">wHumanMsg</a> - Simple user prompting.</li>
+            <li><a href="http://wmodal.websanova.com">wModal</a> - Clean looking and easy to use modals.</li>
+        </ul>
 
-		function tooltip_toggle()
-		{
-			if($("#wTooltip4").hasClass("active"))
-			{
-				$("#wTooltip4").removeClass("active");
-				$("#wTooltip4").wTooltip("title", "This box is off");
-			}
-			else
-			{
-				$("#wTooltip4").addClass("active");
-				$("#wTooltip4").wTooltip("title", "This box is on");
-			}
-		}
-		
-		function html_toggle()
-		{
-			$("#wTooltip9").wTooltip("title", "<span style='color:red;'>still no html</span>");
-		}
-		
-		function html_toggle2()
-		{
-			$("#wTooltip10").wTooltip('html', true);
-			$("#wTooltip10").wTooltip('title', '<span style="color:red;">yes html</span>');
-		}
-	</script>
-	
+        <h2>Demo</h2>
+
+        <div class="content-box">
+            <div id="wTooltip1" class="hoverBox">hover me</div>
+            <div id="wTooltip2" class="hoverBox" title="Title from title attribute">hover me</div>
+            <div id="wTooltip3" class="hoverBox">hover me</div>
+            <div id="wTooltip4" class="hoverBox active" onclick="tooltip_toggle();">click me</div>
+            <div id="wTooltip5" class="hoverBox" title="This is tooltip 5">hover me</div>
+            <div id="wTooltip6" class="hoverBox" title="This is tooltip 6">hover me</div>
+            <div id="wTooltip7" class="hoverBox" title="This is <span style='color:red;'>html</span>">hover html</div>
+            <div id="wTooltip8" class="hoverBox" title="This is <span style='color:red;'>html</span>">hover no html</div>
+            <div id="wTooltip9" class="hoverBox active" title="<span style='color:red;'>no html</span>" onclick="html_toggle();">click me</div>
+            <div id="wTooltip10" class="hoverBox active" title="<span style='color:red;'>no html</span>" onclick="html_toggle2();">click me</div>
+            <div id="wTooltip11" class="hoverBox" title="Home">hover me</div>
+            <div id="wTooltip12" class="hoverBox">hover me</div>
+            
+
+            <div class="mooTest" title="moo">moo</div>
+            <div class="mooTest" title="poo">poo</div>
+            <div class="mooTest" title="zoo">zoo</div>
+        </div>
+
+        <link rel="Stylesheet" type="text/css" href="./wTooltip.css" />
+        <script type="text/javascript" src="./wTooltip.js"></script>
+
+        <script type="text/javascript">
+            $('.mooTest').wTooltip();
+
+            console.log($('.mooTest').wTooltip('opacity'));
+            $('.mooTest :first').wTooltip('opacity', 0.2)
+            console.log($('.mooTest').wTooltip('opacity'));
+
+            $("#wTooltip1").wTooltip();
+            
+            $("#wTooltip2").wTooltip({
+                timeToStop: 2000,
+                theme: "blue"
+            });
+            
+            $("#wTooltip3").wTooltip({
+                position: "mouse",
+                timeToStop: 2000,
+                theme: "plum"
+            });
+            
+            $("#wTooltip4").wTooltip({
+                position: "mouse",
+                title: "This box is on",
+                theme: "green"
+            });
+            
+            $("#wTooltip5, #wTooltip6").wTooltip({position: "mouse", theme:'white'});
+            $("#wTooltip7").wTooltip({theme:'orange'});
+            $("#wTooltip8").wTooltip({html:false, theme:'black'});
+            $("#wTooltip9").wTooltip({html:false, theme:'red'});
+            $("#wTooltip10").wTooltip({html:false, theme:'cream'});
+            $("#wTooltip11").wTooltip({html:false, theme:'black'});
+            $("#wTooltip12").wTooltip({html:false, theme:'yellow'});
+
+            function tooltip_toggle()
+            {
+                if($("#wTooltip4").hasClass("active"))
+                {
+                    $("#wTooltip4").removeClass("active");
+                    $("#wTooltip4").wTooltip("title", "This box is off");
+                }
+                else
+                {
+                    $("#wTooltip4").addClass("active");
+                    $("#wTooltip4").wTooltip("title", "This box is on");
+                }
+            }
+            
+            function html_toggle()
+            {
+                $("#wTooltip9").wTooltip("title", "<span style='color:red;'>still no html</span>");
+            }
+            
+            function html_toggle2()
+            {
+                $("#wTooltip10").wTooltip('html', true);
+                $("#wTooltip10").wTooltip('title', '<span style="color:red;">yes html</span>');
+            }
+        </script>
+        
+        <style>
+            .hoverBox{
+                display: inline-block;
+                margin: 10px;
+                padding: 10px 30px;
+                border: solid #CACACA 1px;
+                cursor: pointer;
+            }
+        </style>
+
+        <h2>Resources</h2>
+
+        <ul>
+            <li><a href="http://websanova.com/plugins">More jQuery plugins by Websanova</a></li>
+            <li><a href="http://www.websanova.com/tutorials/jquery/the-ultimate-guide-to-writing-jquery-plugins">The Ultimate Guide to Writing jQuery Plugins</a></li>
+            <li><a href="http://www.websanova.com/tutorials/jquery/jquery-plugin-development-boilerplate">jQuery Plugin Development Boilerplate</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <div id="footer-icons">
+            <!--a id="youtube-icon" href="http://websanova.com/youtube" target="_blank"></a-->
+            <a id="stumbleupon-icon" href="http://websanova.com/stumbleupon" target="_blank"></a>
+            <a id="linkedin-icon" href="http://websanova.com/linkedin" target="_blank"></a>
+            <a id="facebook-icon" href="http://websanova.com/facebook" target="_blank"></a>
+            <a id="googleplus-icon" href="http://websanova.com/googleplus" target="_blank"></a>
+            <a id="twitter-icon" href="http://websanova.com/twitter" target="_blank"></a>
+            <a id="github-icon" href="http://websanova.com/github" target="_blank"></a>
+            <a id="rss-icon" href="http://websanova.com/feed" target="_blank"></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        if(window.location.protocol === 'file:') $('#addthis-toolbox').hide();
+    </script>
+
+    <!-- AddThis Button BEGIN -->
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-504fdeb9241970a8"></script>
+    <!-- AddThis Button END -->
+
+    <!-- google analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-12380236-11']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </body>
 </html>
