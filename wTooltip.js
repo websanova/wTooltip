@@ -8,7 +8,7 @@
  * @license         This wTooltip jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wTooltip
- * @version         Version 1.7.10
+ * @version         Version 1.8.0
  *
  ******************************************/
 (function($)
@@ -65,10 +65,10 @@
 					tooltip.move(e);//set proper position first
 					tooltip.hoverOn();//display the tooltip
 				},{
-					timeToStop: $settings.timeToStop,
-					onMouseout: function(){ tooltip.hoverOff(); },
-					onStopMove: function(){ tooltip.hoverOff(); }//this will hide tooltip once it's appeared and we move again
-				});
+					timeToStop: $settings.timeToStop
+				})
+				.mouseout(function(){ tooltip.hoverOff(); })
+				.mousemove(function(){ tooltip.hoverOff(); });
 			}
 			else if($settings.position == 'mouse')
 			{
