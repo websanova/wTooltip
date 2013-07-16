@@ -63,6 +63,7 @@ $("#wTooltip").wTooltip({html:false});
 ## Resources
 
 * [More jQuery plugins by Websanova](http://websanova.com/plugins)
+* [Websanova JavaScript Extensions Project](http://websanova.com/extensions)
 * [jQuery Plugin Development Boilerplate](http://wboiler.websanova.com)
 * [The Ultimate Guide to Writing jQuery Plugins](http://www.websanova.com/blog/jquery/the-ultimate-guide-to-writing-jquery-plugins)
 
